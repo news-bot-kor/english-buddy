@@ -37,20 +37,14 @@ html,body{height:100%;background:#f5f5f5;font-family:-apple-system,BlinkMacSyste
 .sitico{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
 .sittitle{font-size:13px;font-weight:600;color:#111;}
 .sitsub{font-size:11px;color:#888;margin-top:1px;}
-
-/* 난이도 선택 */
 .level-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:0 1.25rem 1rem;}
-.lvcard{border:1px solid #e8e8e8;border-radius:12px;padding:10px 8px;cursor:pointer;background:#fff;text-align:center;transition:all .15s;}
-.lvcard:active{opacity:0.8;}
+.lvcard{border:1px solid #e8e8e8;border-radius:12px;padding:12px 8px;cursor:pointer;background:#fff;text-align:center;transition:all .15s;}
 .lvcard.sel{border-width:2px;}
-.lvcard .lv-ico{font-size:20px;margin-bottom:4px;}
-.lvcard .lv-name{font-size:12px;font-weight:600;color:#111;}
-.lvcard .lv-desc{font-size:10px;color:#888;margin-top:2px;line-height:1.3;}
+.lv-name{font-size:13px;font-weight:600;color:#111;margin-bottom:2px;}
+.lv-desc{font-size:10px;color:#888;line-height:1.3;}
 .lv-beginner.sel{border-color:#1D9E75;background:#E1F5EE;}
 .lv-intermediate.sel{border-color:#185FA5;background:#EBF3FB;}
-.lv-advanced.sel{border-color:#993556;background:#FBEAF0;}
-
-/* 입력 모드 */
+.lv-advanced.sel{border-color:#7a1040;background:#FDE8F0;}
 .impicker{margin:0.5rem 1.25rem 0.75rem;border:1px solid #e8e8e8;border-radius:14px;overflow:hidden;}
 .imlabel{font-size:11px;color:#aaa;padding:10px 13px 6px;letter-spacing:0.07em;text-transform:uppercase;border-bottom:1px solid #e8e8e8;}
 .imopts{display:flex;flex-wrap:wrap;}
@@ -58,11 +52,9 @@ html,body{height:100%;background:#f5f5f5;font-family:-apple-system,BlinkMacSyste
 .imopt:nth-child(1),.imopt:nth-child(2){border-top:none;}
 .imopt:nth-child(odd){border-right:1px solid #e8e8e8;}
 .imopt.sel{background:#EBF3FB;}
-.imopt .ico{font-size:20px;}
 .imopt .im-name{font-size:12px;color:#888;font-weight:500;}
 .imopt .im-desc{font-size:10px;color:#aaa;text-align:center;line-height:1.3;}
 .imopt.sel .im-name{color:#185FA5;font-weight:600;}
-
 .startbtn{margin:0.75rem 1.25rem 2rem;padding:15px;border-radius:14px;background:#185FA5;color:#fff;font-size:15px;font-weight:600;border:none;cursor:pointer;font-family:inherit;}
 .startbtn:disabled{background:#e0e0e0;color:#aaa;cursor:not-allowed;}
 .startbtn:not(:disabled):active{opacity:0.85;}
@@ -76,7 +68,6 @@ html,body{height:100%;background:#f5f5f5;font-family:-apple-system,BlinkMacSyste
 .hbadges{margin-left:auto;display:flex;flex-direction:column;align-items:flex-end;gap:3px;}
 .mbadge{font-size:10px;padding:2px 7px;background:#f5f5f5;border-radius:6px;color:#888;white-space:nowrap;}
 .mbadge.lv{background:#EBF3FB;color:#185FA5;}
-
 .msgs{flex:1;overflow-y:auto;padding:1rem 1.25rem;display:flex;flex-direction:column;gap:11px;-webkit-overflow-scrolling:touch;}
 .mrow{display:flex;gap:7px;align-items:flex-end;}
 .mrow.user{flex-direction:row-reverse;}
@@ -85,50 +76,48 @@ html,body{height:100%;background:#f5f5f5;font-family:-apple-system,BlinkMacSyste
 .mrow.ai .bub{background:#f2f2f7;color:#111;border-bottom-left-radius:5px;}
 .mrow.user .bub{background:#185FA5;color:#fff;border-bottom-right-radius:5px;}
 .mrow.user .bub.translated{background:#0C447C;}
-
-/* 번역/팁/교정 박스 */
-.transbox{margin-top:5px;padding:8px 10px;background:#EBF3FB;border-radius:10px;font-size:12px;color:#0C447C;border-left:3px solid #185FA5;max-width:245px;}
-.tipbox{margin-top:5px;padding:8px 10px;background:#FFF8EC;border-radius:10px;font-size:12px;color:#7a5200;border-left:3px solid #f0a500;max-width:245px;}
-.corrbox{margin-top:5px;padding:8px 10px;background:#FFF0F0;border-radius:10px;font-size:12px;color:#8b0000;border-left:3px solid #e53e3e;max-width:245px;}
-.followbox{margin-top:5px;padding:10px 12px;background:#E1F5EE;border-radius:10px;font-size:13px;color:#085041;border-left:3px solid #1D9E75;max-width:245px;cursor:pointer;}
-.followbox .follow-label{font-size:10px;font-weight:600;color:#1D9E75;margin-bottom:4px;}
-.followbox .follow-text{font-size:14px;font-weight:600;color:#085041;margin-bottom:4px;}
-.followbox .follow-hint{font-size:11px;color:#0F6E56;}
+.tipbox{margin-top:5px;padding:8px 10px;background:#f0f6ff;border-radius:10px;font-size:12px;color:#0C447C;border-left:3px solid #185FA5;max-width:245px;}
+.corrbox{margin-top:5px;padding:8px 10px;background:#fff0f0;border-radius:10px;font-size:12px;color:#8b0000;border-left:3px solid #e53e3e;max-width:245px;}
+.followbox{margin-top:5px;padding:10px 12px;background:#e8f8f2;border-radius:10px;font-size:13px;color:#085041;border-left:3px solid #1D9E75;max-width:245px;}
+.followbox .follow-label{font-size:10px;font-weight:600;color:#1D9E75;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.05em;}
+.followbox .follow-text{font-size:15px;font-weight:600;color:#085041;margin-bottom:4px;}
+.followbox .follow-ko{font-size:11px;color:#0F6E56;}
 .blabel{font-weight:600;margin-bottom:3px;}
 .dot{width:6px;height:6px;border-radius:50%;background:#bbb;animation:bnc 1.1s infinite;display:inline-block;margin:0 1px;}
 .dot:nth-child(2){animation-delay:.2s;}.dot:nth-child(3){animation-delay:.4s;}
 @keyframes bnc{0%,60%,100%{transform:translateY(0);}30%{transform:translateY(-6px);}}
 
-/* TEXT INPUT */
-.txtarea{padding:8px 1.25rem 1rem;border-top:1px solid #f0f0f0;background:#fff;flex-shrink:0;}
-.qrow{display:flex;gap:6px;overflow-x:auto;padding-bottom:8px;scrollbar-width:none;-webkit-overflow-scrolling:touch;}
-.qrow::-webkit-scrollbar{display:none;}
-.qchip{flex-shrink:0;padding:6px 12px;border:1px solid #e0e0e0;border-radius:14px;font-size:12px;color:#555;background:#fff;cursor:pointer;white-space:nowrap;font-family:inherit;}
-.input-mode-bar{display:flex;gap:6px;margin-bottom:8px;}
-.im-toggle{flex:1;padding:7px;border:1px solid #e0e0e0;border-radius:10px;font-size:12px;color:#888;background:#fff;cursor:pointer;font-family:inherit;text-align:center;}
-.im-toggle.active{border-color:#185FA5;color:#185FA5;background:#EBF3FB;font-weight:600;}
-.irow{display:flex;gap:8px;align-items:flex-end;}
-.chatta{flex:1;padding:10px 13px;border:1px solid #e0e0e0;border-radius:20px;font-size:14px;font-family:inherit;resize:none;outline:none;color:#111;background:#fff;min-height:42px;max-height:100px;line-height:1.4;}
-.chatta:focus{border-color:#185FA5;}
-.chatta.ko-mode{border-color:#1D9E75;background:#f8fffe;}
-.sendbtn{width:42px;height:42px;border-radius:50%;background:#185FA5;border:none;cursor:pointer;font-size:20px;color:#fff;flex-shrink:0;}
-.sendbtn:disabled{background:#e0e0e0;}
-.ko-hint{font-size:11px;color:#1D9E75;margin-bottom:6px;padding-left:2px;}
-
-/* VOICE INPUT */
-.voicearea{padding:1rem 1.25rem 1.5rem;border-top:1px solid #f0f0f0;background:#fff;display:flex;flex-direction:column;align-items:center;gap:13px;flex-shrink:0;}
-.vstatus{font-size:13px;color:#888;text-align:center;min-height:20px;}
-.vtrans{font-size:13px;color:#111;text-align:center;min-height:20px;padding:0 1rem;font-style:italic;line-height:1.5;}
+/* 공통 음성 입력 영역 */
+.voice-bottom{padding:1rem 1.25rem 1.5rem;border-top:1px solid #f0f0f0;background:#fff;display:flex;flex-direction:column;align-items:center;gap:10px;flex-shrink:0;}
+.vstatus{font-size:13px;color:#888;text-align:center;min-height:20px;font-weight:500;}
+.vtrans{font-size:14px;color:#111;text-align:center;min-height:20px;padding:0 1rem;line-height:1.5;max-width:300px;}
 .micwrap{position:relative;display:flex;align-items:center;justify-content:center;width:76px;height:76px;}
-.micbtn{width:70px;height:70px;border-radius:50%;border:none;cursor:pointer;background:#185FA5;z-index:1;position:relative;font-size:30px;transition:background .15s;}
+.micbtn{width:70px;height:70px;border-radius:50%;border:none;cursor:pointer;background:#185FA5;z-index:1;position:relative;font-size:28px;transition:background .15s;}
 .micbtn.rec{background:#ef4444;}
+.micbtn:active{opacity:0.85;}
 .ring{position:absolute;width:70px;height:70px;border-radius:50%;border:2px solid #185FA5;animation:rng 1.3s ease-out infinite;opacity:0;display:none;}
 .ring:nth-child(2){animation-delay:.45s;}
 .micwrap.active .ring{display:block;}
 @keyframes rng{0%{transform:scale(1);opacity:.5;}100%{transform:scale(1.8);opacity:0;}}
-.vhint{font-size:11px;color:#aaa;}
-.ttsbtn{display:flex;align-items:center;gap:6px;padding:7px 14px;border:1px solid #e0e0e0;border-radius:10px;background:#fff;cursor:pointer;font-size:12px;color:#555;font-family:inherit;}
+.vhint{font-size:11px;color:#aaa;text-align:center;}
+.tts-row{display:flex;gap:8px;align-items:center;}
+.ttsbtn{padding:7px 14px;border:1px solid #e0e0e0;border-radius:10px;background:#fff;cursor:pointer;font-size:12px;color:#555;font-family:inherit;}
 .ttsbtn.on{border-color:#185FA5;color:#185FA5;background:#EBF3FB;}
+
+/* 텍스트 입력 (영어 직접) */
+.txtarea{padding:8px 1.25rem 1rem;border-top:1px solid #f0f0f0;background:#fff;flex-shrink:0;}
+.qrow{display:flex;gap:6px;overflow-x:auto;padding-bottom:8px;scrollbar-width:none;-webkit-overflow-scrolling:touch;}
+.qrow::-webkit-scrollbar{display:none;}
+.qchip{flex-shrink:0;padding:6px 12px;border:1px solid #e0e0e0;border-radius:14px;font-size:12px;color:#555;background:#fff;cursor:pointer;white-space:nowrap;font-family:inherit;}
+.irow{display:flex;gap:8px;align-items:flex-end;}
+.chatta{flex:1;padding:10px 13px;border:1px solid #e0e0e0;border-radius:20px;font-size:14px;font-family:inherit;resize:none;outline:none;color:#111;background:#fff;min-height:42px;max-height:100px;line-height:1.4;}
+.chatta:focus{border-color:#185FA5;}
+.sendbtn{width:42px;height:42px;border-radius:50%;background:#185FA5;border:none;cursor:pointer;font-size:18px;color:#fff;flex-shrink:0;}
+.sendbtn:disabled{background:#e0e0e0;}
+
+/* 따라 말하기 전용 */
+.follow-status-bar{padding:8px 1.25rem;background:#e8f8f2;border-top:1px solid #c8ead8;flex-shrink:0;text-align:center;}
+.follow-status-text{font-size:12px;color:#085041;font-weight:500;}
 </style>
 </head>
 <body>
@@ -138,16 +127,14 @@ html,body{height:100%;background:#f5f5f5;font-family:-apple-system,BlinkMacSyste
 <div class="screen active" id="homeScreen">
   <div class="home-scroll">
     <div class="home-header">
-      <div class="greeting">안녕하세요 👋</div>
+      <div class="greeting">안녕하세요</div>
       <div class="app-title">English Buddy</div>
       <div class="app-sub">친구를 골라서 영어로 대화해보세요</div>
     </div>
-
     <div class="mode-tabs">
       <button class="mtab active" onclick="switchMode('casual')" id="tab-casual">일상 대화</button>
       <button class="mtab" onclick="switchMode('business')" id="tab-business">비즈니스</button>
     </div>
-
     <div id="casualSec">
       <div class="slabel">친구 선택</div>
       <div class="fgrid">
@@ -162,7 +149,6 @@ html,body{height:100%;background:#f5f5f5;font-family:-apple-system,BlinkMacSyste
         <div class="sititem" onclick="selS('daily')" id="si-daily"><div class="sitico" style="background:#E1F5EE;">☕</div><div><div class="sittitle">일상 수다</div><div class="sitsub">주말, 음식, 취미</div></div></div>
       </div>
     </div>
-
     <div id="bizSec" style="display:none;">
       <div class="slabel">동료 선택</div>
       <div class="fgrid">
@@ -175,55 +161,43 @@ html,body{height:100%;background:#f5f5f5;font-family:-apple-system,BlinkMacSyste
         <div class="sititem" onclick="selS('work')" id="si-work"><div class="sitico" style="background:#FFF3E0;">🤝</div><div><div class="sittitle">사무실 스몰톡</div><div class="sitsub">자연스러운 대화</div></div></div>
       </div>
     </div>
-
-    <!-- 난이도 선택 -->
     <div class="slabel">난이도 선택</div>
     <div class="level-grid">
       <div class="lvcard lv-beginner sel" onclick="selLv('beginner')" id="lv-beginner">
-        <div class="lv-ico">🌱</div>
         <div class="lv-name">초보</div>
-        <div class="lv-desc">짧고 쉬운<br>문장 위주</div>
+        <div class="lv-desc">짧고 쉬운 문장 위주</div>
       </div>
       <div class="lvcard lv-intermediate" onclick="selLv('intermediate')" id="lv-intermediate">
-        <div class="lv-ico">📈</div>
         <div class="lv-name">중급</div>
-        <div class="lv-desc">일반적인<br>대화 수준</div>
+        <div class="lv-desc">일반적인 대화 수준</div>
       </div>
       <div class="lvcard lv-advanced" onclick="selLv('advanced')" id="lv-advanced">
-        <div class="lv-ico">🔥</div>
         <div class="lv-name">고급</div>
-        <div class="lv-desc">자연스러운<br>원어민 수준</div>
+        <div class="lv-desc">원어민 수준</div>
       </div>
     </div>
-
-    <!-- 대화 방식 선택 -->
     <div class="impicker">
       <div class="imlabel">대화 방식 선택</div>
       <div class="imopts">
         <button class="imopt sel" id="opt-text" onclick="selIM('text')">
-          <span class="ico">⌨️</span>
           <span class="im-name">영어로 입력</span>
           <span class="im-desc">직접 영어 타이핑</span>
         </button>
         <button class="imopt" id="opt-ko" onclick="selIM('ko')">
-          <span class="ico">🇰🇷</span>
-          <span class="im-name">한국어 → 영어</span>
-          <span class="im-desc">한국어로 쓰면<br>영어로 변환</span>
+          <span class="im-name">한국어 음성 변환</span>
+          <span class="im-desc">한국어로 말하면 영어로 변환</span>
         </button>
         <button class="imopt" id="opt-follow" onclick="selIM('follow')">
-          <span class="ico">📖</span>
           <span class="im-name">따라 말하기</span>
-          <span class="im-desc">AI가 문장 주면<br>따라서 입력</span>
+          <span class="im-desc">AI 문장을 음성으로 따라 말하기</span>
         </button>
         <button class="imopt" id="opt-voice" onclick="selIM('voice')">
-          <span class="ico">🎤</span>
-          <span class="im-name">음성 대화</span>
-          <span class="im-desc">말로 직접 대화</span>
+          <span class="im-name">영어 음성 대화</span>
+          <span class="im-desc">영어로 직접 말하기</span>
         </button>
       </div>
     </div>
-
-    <button class="startbtn" id="startBtn" disabled onclick="startChat()">친구와 대화 시작하기 →</button>
+    <button class="startbtn" id="startBtn" disabled onclick="startChat()">친구와 대화 시작하기</button>
   </div>
 </div>
 
@@ -232,7 +206,7 @@ html,body{height:100%;background:#f5f5f5;font-family:-apple-system,BlinkMacSyste
   <div class="chatheader">
     <button class="backbtn" onclick="goHome()">←</button>
     <div class="chav" id="chAv"></div>
-    <div><div class="chname" id="chName"></div><div class="chonline">● 온라인</div></div>
+    <div><div class="chname" id="chName"></div><div class="chonline">온라인</div></div>
     <div class="hbadges">
       <span class="mbadge" id="chBadge"></span>
       <span class="mbadge lv" id="chLvBadge"></span>
@@ -245,39 +219,61 @@ html,body{height:100%;background:#f5f5f5;font-family:-apple-system,BlinkMacSyste
     <div class="qrow" id="qrow"></div>
     <div class="irow">
       <textarea class="chatta" id="ta" placeholder="영어로 입력..." rows="1" onkeydown="onKey(event)" oninput="resize(this)"></textarea>
-      <button class="sendbtn" id="sendBtn" onclick="doSend()">➤</button>
+      <button class="sendbtn" id="sendBtn" onclick="doSend()">▶</button>
     </div>
   </div>
 
-  <!-- 한국어 → 영어 변환 입력 -->
-  <div id="koInp" style="display:none;" class="txtarea">
-    <div class="ko-hint">💬 한국어로 쓰면 영어로 바꿔드려요</div>
-    <div class="qrow" id="qrowKo"></div>
-    <div class="irow">
-      <textarea class="chatta ko-mode" id="taKo" placeholder="하고 싶은 말을 한국어로..." rows="1" onkeydown="onKeyKo(event)" oninput="resize(this)"></textarea>
-      <button class="sendbtn" style="background:#1D9E75;" id="sendBtnKo" onclick="doSendKo()">➤</button>
+  <!-- 한국어 음성 변환 -->
+  <div id="koInp" style="display:none;" class="voice-bottom">
+    <div class="vstatus" id="koStatus">버튼을 눌러 한국어로 말하세요</div>
+    <div class="vtrans" id="koTrans"></div>
+    <div class="micwrap" id="koMicWrap">
+      <div class="ring"></div><div class="ring"></div>
+      <button class="micbtn" id="koMicBtn" onclick="togKoMic()">
+        <span id="koMicIco">🎤</span>
+      </button>
+    </div>
+    <div class="vhint">한국어로 말하면 자동으로 영어로 변환됩니다</div>
+    <div class="tts-row">
+      <button class="ttsbtn" id="ttsBtn2" onclick="togTTS()">AI 음성 끄기/켜기</button>
     </div>
   </div>
 
-  <!-- 따라 말하기 -->
-  <div id="followInp" style="display:none;" class="txtarea">
-    <div class="ko-hint" style="color:#185FA5;">📖 위의 초록 박스 문장을 따라 입력해보세요</div>
-    <div class="irow">
-      <textarea class="chatta" id="taFollow" placeholder="위 문장을 따라 입력..." rows="1" onkeydown="onKeyFollow(event)" oninput="resize(this)"></textarea>
-      <button class="sendbtn" id="sendBtnFollow" onclick="doSendFollow()">➤</button>
+  <!-- 따라 말하기 음성 -->
+  <div id="followInp" style="display:none;">
+    <div class="follow-status-bar">
+      <div class="follow-status-text" id="followStatusBar">위 초록 박스 문장을 음성으로 따라 말하세요</div>
+    </div>
+    <div class="voice-bottom">
+      <div class="vstatus" id="followStatus">버튼을 눌러 따라 말하세요</div>
+      <div class="vtrans" id="followTrans"></div>
+      <div class="micwrap" id="followMicWrap">
+        <div class="ring"></div><div class="ring"></div>
+        <button class="micbtn" id="followMicBtn" onclick="togFollowMic()">
+          <span id="followMicIco">🎤</span>
+        </button>
+      </div>
+      <div class="vhint">초록 박스 문장을 보고 큰 소리로 따라 말해보세요</div>
+      <div class="tts-row">
+        <button class="ttsbtn" id="ttsBtn3" onclick="togTTS()">AI 음성 끄기/켜기</button>
+      </div>
     </div>
   </div>
 
-  <!-- 음성 입력 -->
-  <div id="voiceInp" style="display:none;" class="voicearea">
-    <div class="vstatus" id="vstatus">버튼을 눌러 말하세요</div>
+  <!-- 영어 음성 대화 -->
+  <div id="voiceInp" style="display:none;" class="voice-bottom">
+    <div class="vstatus" id="vstatus">버튼을 눌러 영어로 말하세요</div>
     <div class="vtrans" id="vtrans"></div>
     <div class="micwrap" id="micwrap">
       <div class="ring"></div><div class="ring"></div>
-      <button class="micbtn" id="micBtn" onclick="togMic()"><span id="micIco">🎤</span></button>
+      <button class="micbtn" id="micBtn" onclick="togMic()">
+        <span id="micIco">🎤</span>
+      </button>
     </div>
     <div class="vhint">버튼을 누르고 영어로 말하세요</div>
-    <button class="ttsbtn" id="ttsBtn" onclick="togTTS()">🔇 AI 음성 켜기</button>
+    <div class="tts-row">
+      <button class="ttsbtn" id="ttsBtn" onclick="togTTS()">AI 음성 끄기/켜기</button>
+    </div>
   </div>
 </div>
 
@@ -287,24 +283,27 @@ const FR={
   emma:{n:'Emma',av:'👩‍🦰',bg:'#EBF3FB',style:'casual American English',lang:'en-US'},
   jake:{n:'Jake',av:'🧔',bg:'#E1F5EE',style:'casual British English',lang:'en-GB'},
   mia:{n:'Mia',av:'👩‍💻',bg:'#FFF3E0',style:'casual Australian English',lang:'en-AU'},
-  alex:{n:'Alex',av:'🧑‍🎤',bg:'#FDE8F0',style:'trendy Gen Z slang-heavy English',lang:'en-US'},
+  alex:{n:'Alex',av:'🧑‍🎤',bg:'#FDE8F0',style:'trendy Gen Z English',lang:'en-US'},
   sarah:{n:'Sarah',av:'👩‍💼',bg:'#EBF3FB',style:'professional business English',lang:'en-US'},
-  tom:{n:'Tom',av:'👨‍💻',bg:'#E8F5E9',style:'professional tech-focused English',lang:'en-US'},
+  tom:{n:'Tom',av:'👨‍💻',bg:'#E8F5E9',style:'professional tech English',lang:'en-US'},
 };
 const SI={
-  commute:{lbl:'출퇴근 스몰톡',p:'commute / morning small talk situation',q:["How was your morning?","Any plans tonight?","Pretty busy today!","Is it always this crowded?"],qKo:["오늘 아침 어때요?","오늘 바빠요?","퇴근 후 약속 있어요?"]},
-  daily:{lbl:'일상 수다',p:'casual daily life chat',q:["What did you do this weekend?","Any good food lately?","I've been so tired!","Seen any good shows?"],qKo:["주말에 뭐 했어요?","요즘 맛있는 거 먹었어요?","너무 피곤해요"]},
-  meeting:{lbl:'회의·발표',p:'work meeting / presentation situation',q:["I think we should...","Could you clarify?","I agree with you.","What's the timeline?"],qKo:["제 의견은요...","조금 더 설명해줄 수 있어요?","동의해요"]},
-  work:{lbl:'사무실 스몰톡',p:'office small talk',q:["How's the project going?","Busy week?","Looking forward to the weekend!"],qKo:["프로젝트 잘 되고 있어요?","이번 주 바빠요?","주말이 기대돼요"]},
+  commute:{lbl:'출퇴근 스몰톡',p:'commute small talk situation',q:["How was your morning?","Any plans tonight?","Pretty busy today!","Is it always this crowded?"]},
+  daily:{lbl:'일상 수다',p:'casual daily life chat',q:["What did you do this weekend?","Any good food lately?","I've been so tired!","Seen any good shows?"]},
+  meeting:{lbl:'회의 발표',p:'work meeting situation',q:["I think we should...","Could you clarify?","I agree with you.","What's the timeline?"]},
+  work:{lbl:'사무실 스몰톡',p:'office small talk',q:["How's the project going?","Busy week?","Looking forward to the weekend!"]},
 };
 const LV={
-  beginner:{lbl:'🌱 초보',desc:'Use VERY simple short sentences (max 8 words each). Use basic vocabulary only. Speak slowly and clearly. After each reply, give a "📖 따라해보세요:" section with 1 simple sentence the user can copy and practice, with Korean translation.'},
-  intermediate:{lbl:'📈 중급',desc:'Use natural conversational English. Not too complex. Mix simple and medium sentences.'},
-  advanced:{lbl:'🔥 고급',desc:'Use natural native-level English with idioms, contractions, and varied vocabulary.'},
+  beginner:{lbl:'초보',desc:'Use VERY simple short sentences (max 8 words). Basic vocabulary only. Always include "따라해보세요:" section with one simple sentence and Korean translation in parentheses.'},
+  intermediate:{lbl:'중급',desc:'Use natural conversational English. Mix simple and medium sentences.'},
+  advanced:{lbl:'고급',desc:'Use natural native-level English with idioms and varied vocabulary.'},
 };
 
 let sf=null,ss=null,slv='beginner',smode='casual',im='text';
-let hist=[],busy=false,rec=null,tts=false,recording=false;
+let hist=[],busy=false,ttsEnabled=true;
+let rec=null,recording=false;
+let koRec=null,koRecording=false;
+let followRec=null,followRecording=false;
 let lastFollowSentence='';
 
 function switchMode(m){
@@ -316,18 +315,12 @@ function switchMode(m){
 }
 function selF(id){if(sf)document.getElementById('fc-'+sf)?.classList.remove('sel');sf=id;document.getElementById('fc-'+id)?.classList.add('sel');updBtn();}
 function selS(id){if(ss)document.getElementById('si-'+ss)?.classList.remove('sel');ss=id;document.getElementById('si-'+id)?.classList.add('sel');updBtn();}
-function selLv(lv){
-  ['beginner','intermediate','advanced'].forEach(l=>document.getElementById('lv-'+l).classList.remove('sel'));
-  slv=lv;document.getElementById('lv-'+lv).classList.add('sel');
-}
-function selIM(m){
-  im=m;
-  ['text','ko','follow','voice'].forEach(t=>document.getElementById('opt-'+t).classList.toggle('sel',t===m));
-}
+function selLv(lv){['beginner','intermediate','advanced'].forEach(l=>document.getElementById('lv-'+l).classList.remove('sel'));slv=lv;document.getElementById('lv-'+lv).classList.add('sel');}
+function selIM(m){im=m;['text','ko','follow','voice'].forEach(t=>document.getElementById('opt-'+t).classList.toggle('sel',t===m));}
 function updBtn(){
   const b=document.getElementById('startBtn');
-  if(sf&&ss){b.disabled=false;b.textContent=FR[sf].n+'와 '+SI[ss].lbl+' 시작 →';}
-  else{b.disabled=true;b.textContent='친구와 대화 시작하기 →';}
+  if(sf&&ss){b.disabled=false;b.textContent=FR[sf].n+'와 '+SI[ss].lbl+' 시작';}
+  else{b.disabled=true;b.textContent='친구와 대화 시작하기';}
 }
 
 function startChat(){
@@ -344,8 +337,7 @@ function startChat(){
     document.getElementById('txtInp').style.display='block';
     document.getElementById('qrow').innerHTML=s.q.map(p=>`<button class="qchip" onclick="useQ('${p.replace(/'/g,"\\'")}'">${p}</button>`).join('');
   } else if(im==='ko'){
-    document.getElementById('koInp').style.display='block';
-    document.getElementById('qrowKo').innerHTML=(s.qKo||[]).map(p=>`<button class="qchip" style="border-color:#1D9E75;color:#085041;" onclick="useQKo('${p.replace(/'/g,"\\'")}'">${p}</button>`).join('');
+    document.getElementById('koInp').style.display='flex';
   } else if(im==='follow'){
     document.getElementById('followInp').style.display='block';
   } else {
@@ -357,29 +349,25 @@ function startChat(){
 
 function buildSys(f,s,l){
   return `You are ${f.n}, a friendly English conversation partner for a Korean learner. Style: ${f.style}. Scenario: ${s.p}.
-Level instruction: ${l.desc}
+Level: ${l.desc}
 
 Rules:
 1. Reply naturally in English as ${f.n}.
-2. After your reply, add "💡 Tip:" in Korean with 1-2 useful expressions from your reply.
-3. If the user makes a grammar or expression error, add "✏️ 교정:" in Korean.
-4. For beginner level, ALWAYS include "📖 따라해보세요:" with one simple sentence + Korean translation that the user can practice.
-5. Keep replies warm and encouraging.`;
+2. After your reply add "Tip:" in Korean explaining 1-2 useful phrases. Do NOT use any emoji.
+3. If user makes a grammar error add "Correction:" in Korean. Do NOT use any emoji.
+4. For beginner level ALWAYS include "따라해보세요:" with one simple English sentence and Korean translation in parentheses. Do NOT use any emoji or asterisks.
+5. Be warm and encouraging. NO emoji anywhere in your response.`;
 }
 
 function goHome(){
-  stopRec();window.speechSynthesis?.cancel();
+  stopAllRec();window.speechSynthesis?.cancel();
   document.getElementById('chatScreen').classList.remove('active');
   document.getElementById('homeScreen').classList.add('active');
 }
 function useQ(p){document.getElementById('ta').value=p;document.getElementById('ta').focus();}
-function useQKo(p){document.getElementById('taKo').value=p;document.getElementById('taKo').focus();}
 function onKey(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();doSend();}}
-function onKeyKo(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();doSendKo();}}
-function onKeyFollow(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();doSendFollow();}}
 function resize(el){el.style.height='auto';el.style.height=Math.min(el.scrollHeight,100)+'px';}
 
-// 영어 직접 입력
 function doSend(){
   const ta=document.getElementById('ta');
   const t=ta.value.trim();
@@ -389,109 +377,41 @@ function doSend(){
   callAI(buildSys(FR[sf],SI[ss],LV[slv]),null,false);
 }
 
-// 한국어 → 영어 변환
-async function doSendKo(){
-  const ta=document.getElementById('taKo');
-  const koText=ta.value.trim();
-  if(!koText||busy)return;
-  ta.value='';ta.style.height='auto';
-  busy=true;document.getElementById('sendBtnKo').disabled=true;
-  // 번역 처리
-  addMsgKo(koText);
-  try{
-    const r=await fetch('/api/chat',{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({
-        model:'claude-sonnet-4-5',max_tokens:200,
-        messages:[{role:'user',content:`Translate this Korean sentence to natural English for a conversation. Return ONLY the English translation, nothing else: "${koText}"`}]
-      })
-    });
-    const d=await r.json();
-    const enText=(d.content?.[0]?.text||'').trim();
-    // 번역 결과 보여주고 대화에 전송
-    updateKoMsgWithTranslation(enText);
-    hist.push({role:'user',content:enText});
-    busy=false;document.getElementById('sendBtnKo').disabled=false;
-    callAI(buildSys(FR[sf],SI[ss],LV[slv]),null,false);
-  }catch(e){
-    busy=false;document.getElementById('sendBtnKo').disabled=false;
-    addMsg('ai','번역 오류가 발생했어요.');
-  }
-}
-
-// 따라 말하기 입력
-function doSendFollow(){
-  const ta=document.getElementById('taFollow');
-  const t=ta.value.trim();
-  if(!t||busy)return;
-  // 정답 비교
-  const correct=lastFollowSentence.toLowerCase().replace(/[^a-z0-9\s]/g,'').trim();
-  const input=t.toLowerCase().replace(/[^a-z0-9\s]/g,'').trim();
-  addMsg('user',t);ta.value='';ta.style.height='auto';
-  if(correct&&input===correct){
-    addFollowResult(true);
-  } else if(correct){
-    addFollowResult(false,lastFollowSentence);
-  }
-  hist.push({role:'user',content:t});
-  callAI(buildSys(FR[sf],SI[ss],LV[slv]),null,false);
-}
-
-let koMsgRow=null;
-function addMsgKo(koText){
-  const c=document.getElementById('msgs');
-  const row=document.createElement('div');row.className='mrow user';koMsgRow=row;
-  const bub=document.createElement('div');bub.className='bub translated';
-  bub.innerHTML=`<span style="font-size:11px;opacity:0.8;">🇰🇷 ${koText}</span><br><span id="enResult" style="font-size:13px;opacity:0.6;">번역 중...</span>`;
-  row.appendChild(bub);c.appendChild(row);c.scrollTop=c.scrollHeight;
-}
-function updateKoMsgWithTranslation(enText){
-  const el=document.getElementById('enResult');
-  if(el)el.innerHTML=`➜ ${enText}`;
-}
-function addFollowResult(correct,expected){
-  const c=document.getElementById('msgs');
-  const box=document.createElement('div');
-  if(correct){
-    box.style.cssText='text-align:center;font-size:12px;color:#1D9E75;padding:4px;';
-    box.textContent='✅ 완벽해요!';
-  } else {
-    box.className='corrbox';box.style.maxWidth='100%';
-    box.innerHTML=`<div class="blabel">✏️ 정답은</div>${expected}`;
-  }
-  c.appendChild(box);c.scrollTop=c.scrollHeight;
-}
-
 function addMsg(role,content){
   const c=document.getElementById('msgs');
   const f=FR[sf];
   const row=document.createElement('div');row.className='mrow '+(role==='user'?'user':'ai');
   if(role==='ai'){const av=document.createElement('div');av.className='mav';av.style.background=f.bg;av.textContent=f.av;row.appendChild(av);}
-  // 파싱: 따라해보세요 / Tip / 교정
-  const parts=content.split(/\n\n(💡 Tip:|✏️ 교정:|📖 따라해보세요:)/);
+  // 파싱
+  const clean=content.replace(/[\*\_\`]/g,'');
+  const parts=clean.split(/\n\n(Tip:|Correction:|따라해보세요:)/);
   const bub=document.createElement('div');bub.className='bub';bub.textContent=parts[0].trim();
   row.appendChild(bub);
+  let mainText=parts[0].trim();
   for(let i=1;i<parts.length;i+=2){
     const lbl=parts[i],txt=(parts[i+1]||'').trim();
     const box=document.createElement('div');
-    if(lbl.includes('따라해보세요')){
+    if(lbl==='따라해보세요:'){
       box.className='followbox';
       const lines=txt.split('\n');
-      const sentence=lines[0].trim();
-      const translation=lines.slice(1).join(' ').trim();
+      const sentence=lines[0].replace(/[\*\"]/g,'').trim();
+      const ko=lines.slice(1).join(' ').trim();
       lastFollowSentence=sentence;
-      box.innerHTML=`<div class="follow-label">📖 따라해보세요</div><div class="follow-text">${sentence}</div><div class="follow-hint">${translation}</div>`;
-      if(im==='follow'){box.onclick=()=>{document.getElementById('taFollow').value=sentence;};}
-    } else if(lbl.includes('Tip')){
-      box.className='tipbox';box.innerHTML='<div class="blabel">💡 이런 표현!</div>'+txt;
+      box.innerHTML=`<div class="follow-label">따라해보세요</div><div class="follow-text">${sentence}</div><div class="follow-ko">${ko}</div>`;
+      // 따라 말하기 모드면 상태바 업데이트
+      if(im==='follow'){
+        const sb=document.getElementById('followStatusBar');
+        if(sb)sb.textContent='"'+sentence+'" 을 따라 말해보세요';
+      }
+    } else if(lbl==='Tip:'){
+      box.className='tipbox';box.innerHTML='<div class="blabel">이런 표현을 배워요</div>'+txt;
     } else {
-      box.className='corrbox';box.innerHTML='<div class="blabel">✏️ 교정</div>'+txt;
+      box.className='corrbox';box.innerHTML='<div class="blabel">이렇게 말해보세요</div>'+txt;
     }
     row.appendChild(box);
   }
   c.appendChild(row);c.scrollTop=c.scrollHeight;
-  if(role==='ai'&&tts)speakTTS(parts[0].trim());
+  if(role==='ai'&&ttsEnabled)speakTTS(mainText);
 }
 
 function showTyping(){
@@ -505,16 +425,12 @@ function rmTyping(){document.getElementById('typr')?.remove();}
 
 async function callAI(sys,initP,isFirst){
   busy=true;
-  ['sendBtn','sendBtnKo','sendBtnFollow'].forEach(id=>{const el=document.getElementById(id);if(el)el.disabled=true;});
+  const sb=document.getElementById('sendBtn');if(sb)sb.disabled=true;
   showTyping();
   let msgs=[...hist];
   if(isFirst)msgs=[{role:'user',content:initP}];
   try{
-    const r=await fetch('/api/chat',{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({model:'claude-sonnet-4-5',max_tokens:1000,system:sys,messages:msgs})
-    });
+    const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-5',max_tokens:1000,system:sys,messages:msgs})});
     if(!r.ok){const e=await r.json();throw new Error(e.error?.message||'API 오류');}
     const d=await r.json();
     const reply=d.content?.[0]?.text||'Something went wrong!';
@@ -523,31 +439,166 @@ async function callAI(sys,initP,isFirst){
     else{hist.push({role:'assistant',content:reply});}
   }catch(e){rmTyping();addMsg('ai','오류: '+e.message);}
   busy=false;
-  ['sendBtn','sendBtnKo','sendBtnFollow'].forEach(id=>{const el=document.getElementById(id);if(el)el.disabled=false;});
-  if(im==='voice')document.getElementById('vstatus').textContent='버튼을 눌러 말하세요';
+  if(sb)sb.disabled=false;
+  setVoiceStatus('버튼을 눌러 말하세요');
 }
 
-function initRec(){
+function setVoiceStatus(msg){
+  ['vstatus','koStatus','followStatus'].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent=msg;});
+}
+
+// TTS
+function togTTS(){
+  ttsEnabled=!ttsEnabled;
+  ['ttsBtn','ttsBtn2','ttsBtn3'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(el){el.textContent=ttsEnabled?'AI 음성 끄기':'AI 음성 켜기';el.classList.toggle('on',ttsEnabled);}
+  });
+  if(!ttsEnabled)window.speechSynthesis?.cancel();
+}
+function speakTTS(text){
+  if(!window.speechSynthesis||!ttsEnabled)return;
+  window.speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(text);
+  u.lang=FR[sf]?.lang||'en-US';u.rate=0.85;
+  const vs=window.speechSynthesis.getVoices();
+  const mv=vs.find(v=>v.lang.startsWith((FR[sf]?.lang||'en').split('-')[0]));
+  if(mv)u.voice=mv;
+  window.speechSynthesis.speak(u);
+}
+if(window.speechSynthesis)window.speechSynthesis.onvoiceschanged=()=>{};
+
+// 영어 음성 대화
+function mkRec(lang,onResult,onEnd,onErr){
   const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
   if(!SR)return null;
-  const r=new SR();
-  r.lang=FR[sf]?.lang||'en-US';r.interimResults=true;r.continuous=false;
-  r.onstart=()=>{recording=true;document.getElementById('vstatus').textContent='듣고 있어요...';document.getElementById('micBtn').classList.add('rec');document.getElementById('micIco').textContent='⏹';document.getElementById('micwrap').classList.add('active');};
-  r.onresult=(e)=>{let interim='',final='';for(let i=e.resultIndex;i<e.results.length;i++){if(e.results[i].isFinal)final+=e.results[i][0].transcript;else interim+=e.results[i][0].transcript;}document.getElementById('vtrans').textContent=final||interim;};
-  r.onend=()=>{
-    recording=false;document.getElementById('micBtn').classList.remove('rec');document.getElementById('micIco').textContent='🎤';document.getElementById('micwrap').classList.remove('active');
-    const t=document.getElementById('vtrans').textContent.trim();
-    if(t&&!busy){addMsg('user',t);hist.push({role:'user',content:t});document.getElementById('vtrans').textContent='';document.getElementById('vstatus').textContent='응답 중...';callAI(buildSys(FR[sf],SI[ss],LV[slv]),null,false);}
-    else if(!t){document.getElementById('vstatus').textContent='인식 못했어요. 다시 눌러보세요';}
-  };
-  r.onerror=(e)=>{recording=false;document.getElementById('micBtn').classList.remove('rec');document.getElementById('micIco').textContent='🎤';document.getElementById('micwrap').classList.remove('active');document.getElementById('vstatus').textContent=e.error==='not-allowed'?'⚠️ 마이크 권한을 허용해주세요':'오류: '+e.error;};
+  const r=new SR();r.lang=lang;r.interimResults=true;r.continuous=false;
+  r.onresult=(e)=>{let interim='',final='';for(let i=e.resultIndex;i<e.results.length;i++){if(e.results[i].isFinal)final+=e.results[i][0].transcript;else interim+=e.results[i][0].transcript;}onResult(final||interim,!!final);};
+  r.onend=onEnd;r.onerror=onErr;
   return r;
 }
-function togMic(){if(busy)return;if(recording){stopRec();}else{rec=initRec();if(!rec){document.getElementById('vstatus').textContent='Safari 브라우저를 사용해주세요';return;}try{rec.start();}catch(e){document.getElementById('vstatus').textContent='마이크 오류, 다시 눌러보세요';}}}
-function stopRec(){if(rec&&recording){try{rec.stop();}catch(e){}}recording=false;}
-function togTTS(){tts=!tts;const b=document.getElementById('ttsBtn');b.textContent=tts?'🔊 AI 음성 끄기':'🔇 AI 음성 켜기';b.classList.toggle('on',tts);if(!tts)window.speechSynthesis?.cancel();}
-function speakTTS(text){if(!window.speechSynthesis)return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang=FR[sf]?.lang||'en-US';u.rate=0.9;const vs=window.speechSynthesis.getVoices();const mv=vs.find(v=>v.lang.startsWith((FR[sf]?.lang||'en').split('-')[0]));if(mv)u.voice=mv;window.speechSynthesis.speak(u);}
-if(window.speechSynthesis)window.speechSynthesis.onvoiceschanged=()=>{};
+
+function togMic(){
+  if(busy)return;
+  if(recording){if(rec)try{rec.stop();}catch(e){}recording=false;return;}
+  rec=mkRec(FR[sf]?.lang||'en-US',
+    (t)=>document.getElementById('vtrans').textContent=t,
+    ()=>{
+      recording=false;
+      document.getElementById('micBtn').classList.remove('rec');
+      document.getElementById('micIco').textContent='🎤';
+      document.getElementById('micwrap').classList.remove('active');
+      const t=document.getElementById('vtrans').textContent.trim();
+      if(t&&!busy){addMsg('user',t);hist.push({role:'user',content:t});document.getElementById('vtrans').textContent='';document.getElementById('vstatus').textContent='응답 중...';callAI(buildSys(FR[sf],SI[ss],LV[slv]),null,false);}
+      else if(!t)document.getElementById('vstatus').textContent='인식 못했어요. 다시 눌러보세요';
+    },
+    (e)=>{recording=false;document.getElementById('micBtn').classList.remove('rec');document.getElementById('micIco').textContent='🎤';document.getElementById('micwrap').classList.remove('active');document.getElementById('vstatus').textContent=e.error==='not-allowed'?'마이크 권한을 허용해주세요':'오류: '+e.error;}
+  );
+  if(!rec){document.getElementById('vstatus').textContent='Safari 브라우저를 사용해주세요';return;}
+  try{rec.start();recording=true;document.getElementById('micBtn').classList.add('rec');document.getElementById('micIco').textContent='■';document.getElementById('micwrap').classList.add('active');document.getElementById('vstatus').textContent='듣고 있어요...';}
+  catch(e){document.getElementById('vstatus').textContent='마이크 오류, 다시 눌러보세요';}
+}
+
+// 한국어 음성 변환
+function togKoMic(){
+  if(busy)return;
+  if(koRecording){if(koRec)try{koRec.stop();}catch(e){}koRecording=false;return;}
+  koRec=mkRec('ko-KR',
+    (t)=>document.getElementById('koTrans').textContent=t,
+    async()=>{
+      koRecording=false;
+      document.getElementById('koMicBtn').classList.remove('rec');
+      document.getElementById('koMicIco').textContent='🎤';
+      document.getElementById('koMicWrap').classList.remove('active');
+      const koText=document.getElementById('koTrans').textContent.trim();
+      if(!koText){document.getElementById('koStatus').textContent='인식 못했어요. 다시 눌러보세요';return;}
+      document.getElementById('koStatus').textContent='영어로 변환 중...';
+      busy=true;
+      try{
+        const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-5',max_tokens:150,messages:[{role:'user',content:`Translate to natural English (reply ONLY with the English translation, no explanation): "${koText}"`}]})});
+        const d=await r.json();
+        const enText=(d.content?.[0]?.text||'').trim();
+        document.getElementById('koTrans').textContent=koText+' → '+enText;
+        addMsgKo(koText,enText);
+        hist.push({role:'user',content:enText});
+        busy=false;
+        document.getElementById('koStatus').textContent='응답 중...';
+        callAI(buildSys(FR[sf],SI[ss],LV[slv]),null,false);
+      }catch(e){busy=false;document.getElementById('koStatus').textContent='변환 오류. 다시 눌러보세요';}
+    },
+    (e)=>{koRecording=false;document.getElementById('koMicBtn').classList.remove('rec');document.getElementById('koMicIco').textContent='🎤';document.getElementById('koMicWrap').classList.remove('active');document.getElementById('koStatus').textContent=e.error==='not-allowed'?'마이크 권한을 허용해주세요':'오류: '+e.error;}
+  );
+  if(!koRec){document.getElementById('koStatus').textContent='Safari 브라우저를 사용해주세요';return;}
+  try{koRec.start();koRecording=true;document.getElementById('koMicBtn').classList.add('rec');document.getElementById('koMicIco').textContent='■';document.getElementById('koMicWrap').classList.add('active');document.getElementById('koStatus').textContent='한국어로 말하세요...';}
+  catch(e){document.getElementById('koStatus').textContent='마이크 오류';}
+}
+
+function addMsgKo(koText,enText){
+  const c=document.getElementById('msgs');
+  const row=document.createElement('div');row.className='mrow user';
+  const bub=document.createElement('div');bub.className='bub translated';
+  bub.innerHTML=`<div style="font-size:11px;opacity:0.75;margin-bottom:3px;">${koText}</div><div>${enText}</div>`;
+  row.appendChild(bub);c.appendChild(row);c.scrollTop=c.scrollHeight;
+}
+
+// 따라 말하기 음성
+function togFollowMic(){
+  if(busy)return;
+  if(followRecording){if(followRec)try{followRec.stop();}catch(e){}followRecording=false;return;}
+  followRec=mkRec(FR[sf]?.lang||'en-US',
+    (t)=>document.getElementById('followTrans').textContent=t,
+    ()=>{
+      followRecording=false;
+      document.getElementById('followMicBtn').classList.remove('rec');
+      document.getElementById('followMicIco').textContent='🎤';
+      document.getElementById('followMicWrap').classList.remove('active');
+      const said=document.getElementById('followTrans').textContent.trim();
+      if(!said){document.getElementById('followStatus').textContent='인식 못했어요. 다시 눌러보세요';return;}
+      // 정답 비교
+      const normalize=s=>s.toLowerCase().replace(/[^a-z0-9\s]/g,'').trim();
+      const correct=normalize(lastFollowSentence);
+      const input=normalize(said);
+      addMsg('user',said);
+      if(correct&&input===correct){
+        addResultBox(true,'');
+      } else if(correct){
+        addResultBox(false,lastFollowSentence);
+      }
+      hist.push({role:'user',content:said});
+      document.getElementById('followTrans').textContent='';
+      document.getElementById('followStatus').textContent='응답 중...';
+      callAI(buildSys(FR[sf],SI[ss],LV[slv]),null,false);
+    },
+    (e)=>{followRecording=false;document.getElementById('followMicBtn').classList.remove('rec');document.getElementById('followMicIco').textContent='🎤';document.getElementById('followMicWrap').classList.remove('active');document.getElementById('followStatus').textContent=e.error==='not-allowed'?'마이크 권한을 허용해주세요':'오류: '+e.error;}
+  );
+  if(!followRec){document.getElementById('followStatus').textContent='Safari 브라우저를 사용해주세요';return;}
+  try{followRec.start();followRecording=true;document.getElementById('followMicBtn').classList.add('rec');document.getElementById('followMicIco').textContent='■';document.getElementById('followMicWrap').classList.add('active');document.getElementById('followStatus').textContent='말하세요...';}
+  catch(e){document.getElementById('followStatus').textContent='마이크 오류';}
+}
+
+function addResultBox(correct,expected){
+  const c=document.getElementById('msgs');
+  const box=document.createElement('div');
+  if(correct){
+    box.style.cssText='text-align:center;font-size:13px;color:#1D9E75;padding:6px;font-weight:600;';
+    box.textContent='잘 하셨어요!';
+  } else {
+    box.className='corrbox';box.style.maxWidth='100%';
+    box.innerHTML=`<div class="blabel">정답 문장</div>${expected}`;
+  }
+  c.appendChild(box);c.scrollTop=c.scrollHeight;
+}
+
+function stopAllRec(){
+  if(rec&&recording){try{rec.stop();}catch(e){}}recording=false;
+  if(koRec&&koRecording){try{koRec.stop();}catch(e){}}koRecording=false;
+  if(followRec&&followRecording){try{followRec.stop();}catch(e){}}followRecording=false;
+}
+
+// TTS 기본 켜기
+document.addEventListener('DOMContentLoaded',()=>{
+  ['ttsBtn','ttsBtn2','ttsBtn3'].forEach(id=>{const el=document.getElementById(id);if(el){el.textContent='AI 음성 끄기';el.classList.add('on');}});
+});
 </script>
 </body>
 </html>
