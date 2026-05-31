@@ -392,7 +392,7 @@ async function callAI(sys,initP,isFirst){
         'anthropic-version':'2023-06-01',
         'anthropic-dangerous-direct-browser-access':'true'
       },
-      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,system:sys,messages:msgs})
+      body:JSON.stringify({model:'claude-sonnet-4-5',max_tokens:1000,system:sys,messages:msgs})
     });
     if(!r.ok){
       const e=await r.json();
